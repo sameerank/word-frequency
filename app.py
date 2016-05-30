@@ -84,7 +84,7 @@ def get_results(job_key):
         )[:10]
         return jsonify(results)
     else:
-        return "Job not finished!", 200
+        return "Job not finished!", 202
 
 if __name__ == '__main__':
     app.run()
