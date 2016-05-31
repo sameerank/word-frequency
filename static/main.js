@@ -17,7 +17,6 @@
         $http.post('/start', {"url": userInput}).
         success(function (results) {
           $scope.urlerror = false;
-          $log.log(results);
           getWordFrequency(results);
           $scope.wordcounts = null;
           $scope.loading = true;
@@ -34,10 +33,7 @@
         var poller = function () {
           $http.get('/results/' + jobID).
           success(function (data, status, headers, config) {
-            if (status === 202) {
-              $log.log(data, status)
-            } else if (status === 200) {
-              $log.log(data);
+            if (status === 200) {
               $scope.loading = false;
               $scope.submitButtonText = "Submit";
               $scope.wordcounts = data;
@@ -47,7 +43,6 @@
             timeout = $timeout(poller, 2000);
           }).
           error(function (error) {
-            $log.log(error);
             $scope.loading = false;
             $scope.submitButtonText = "Submit";
             $scope.urlerror = true;
