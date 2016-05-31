@@ -1,6 +1,6 @@
-# word-frequency
+### View the live version [here](http://wordfrequency-pro.herokuapp.com/)!
 
-## View the live version [here](http://wordfrequency-pro.herokuapp.com/)!
+# word-frequency
 
 * Counts how often words are used on a webpage.
 * Backend is built in Python with Flask, and the frontend is built with AngularJS.
