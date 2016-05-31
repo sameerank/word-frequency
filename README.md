@@ -1,5 +1,7 @@
 # word-frequency
 
+## View the live version [here](http://wordfrequency-pro.herokuapp.com/)!
+
 * Counts how often words are used on a webpage.
 * Backend is built in Python with Flask, and the frontend is built with AngularJS.
 * SQLAlchemy provides the ORM for the PostgreSQL database, and Alembic enables migrations.
